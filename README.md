@@ -3,6 +3,9 @@
  -Changing the orientation to landscape(layout qualifier) will display now functionality (Scientific calculator)
  Hint: Create all buttons using Relative/Grid Layout and append the values to the TextView. Show the result in a separate TextView.
  
+ ![Screen Shot 2019-06-07 at 1 36 25 PM](https://user-images.githubusercontent.com/51377425/59122777-9cde7580-8929-11e9-8f0a-573cab59b577.png)
+
+ 
  
  public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -130,3 +133,104 @@
         }
     }
 }
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:background="drawable/shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvResult"
+        android:text="helllooo"
+        />
+
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        android:rowCount="5"
+        android:layout_alignParentBottom="true"
+        android:useDefaultMargins="true">
+
+        <Button
+            android:id="@+id/btn7"
+            android:background="drawable/shape"
+            android:text="7" />
+        <Button
+            android:id="@+id/btn8"
+            android:background="drawable/shape"
+            android:text="8" />
+        <Button
+            android:id="@+id/btn9"
+            android:background="drawable/shape"
+            android:text="9" />
+        <Button
+            android:id="@+id/btnAdd"
+            android:background="drawable/shape"
+            android:text="+" />
+        <Button
+            android:id="@+id/btn4"
+            android:background="drawable/shape"
+            android:text="4" />
+        <Button
+            android:id="@+id/btn5"
+            android:background="drawable/shape"
+            android:text="5" />
+        <Button
+            android:id="@+id/btn6"
+            android:background="drawable/shape"
+            android:text="6" />
+        <Button
+            android:id="@+id/btnMin"
+            android:background="drawable/shape"
+            android:text="-" />
+        <Button
+            android:id="@+id/btn1"
+            android:background="drawable/shape"
+            android:text="1" />
+        <Button
+            android:id="@+id/btn2"
+            android:background="drawable/shape"
+            android:text="2" />
+        <Button
+            android:id="@+id/btn3"
+            android:background="drawable/shape"
+            android:text="3" />
+        <Button
+            android:id="@+id/btnMul"
+            android:background="drawable/shape"
+            android:text="*" />
+        <Button
+            android:id="@+id/btnDecimal"
+            android:background="drawable/shape"
+            android:text="." />
+        <Button
+            android:id="@+id/btn0"
+            android:background="drawable/shape"
+            android:text="0" />
+        <Button
+            android:id="@+id/btnDiv"
+            android:background="drawable/shape"
+            android:text="/" />
+        <Button
+            android:id="@+id/btnEquals"
+            android:background="drawable/shape"
+            android:text="=" />
+
+
+    </GridLayout>
+
+
+
+
+</RelativeLayout>
