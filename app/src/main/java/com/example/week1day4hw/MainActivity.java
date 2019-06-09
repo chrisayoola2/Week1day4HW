@@ -121,61 +121,61 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         switch (v.getId()) {
             case R.id.btn0:
-                strBeforeOperator.append(0);                //On click add 0
+                strBeforeOperator.append(0);                //On click add 0 to string builder
                 tvCalculate.setText(strBeforeOperator);
                 break;
 
             case R.id.btn1:
 
                 strBeforeOperator.append(1);
-                tvCalculate.setText(strBeforeOperator);   //On click add 1
+                tvCalculate.setText(strBeforeOperator);   //On click add 1  to string builder
                 break;
 
             case R.id.btn2:
                 strBeforeOperator.append(2);
-                tvCalculate.setText(strBeforeOperator);  //On click add 2
+                tvCalculate.setText(strBeforeOperator);  //On click add 2 to string builder
                 break;
 
             case R.id.btn3:
                 strBeforeOperator.append(3);
-                tvCalculate.setText(strBeforeOperator);  //On click add 3
+                tvCalculate.setText(strBeforeOperator);  //On click add 3 to string builder
                 break;
 
             case R.id.btn4:
                 strBeforeOperator.append(4);
-                tvCalculate.setText(strBeforeOperator);  //On click add 4
+                tvCalculate.setText(strBeforeOperator);  //On click add 4 to string builder
                 break;
 
             case R.id.btn5:
                 strBeforeOperator.append(5);
-                tvCalculate.setText(strBeforeOperator);  //On click add 5
+                tvCalculate.setText(strBeforeOperator);  //On click add 5 to string builder
                 break;
 
             case R.id.btn6:
                 strBeforeOperator.append(6);
-                tvCalculate.setText(strBeforeOperator);  //On click add 6
+                tvCalculate.setText(strBeforeOperator);  //On click add 6 to string builder
                 break;
 
             case R.id.btn7:
                 strBeforeOperator.append(7);
-                tvCalculate.setText(strBeforeOperator);  //On click add 7
+                tvCalculate.setText(strBeforeOperator);  //On click add 7 to string builder
                 break;
 
             case R.id.btn8:
                 strBeforeOperator.append(8);
-                tvCalculate.setText(strBeforeOperator);  //On click add 8
+                tvCalculate.setText(strBeforeOperator);  //On click add 8 to string builder
                 break;
 
             case R.id.btn9:
                 strBeforeOperator.append(9);
-                tvCalculate.setText(strBeforeOperator);  //On click add 9
+                tvCalculate.setText(strBeforeOperator);  //On click add 9 to string builder
                 break;
 
             case R.id.btnClear:
                 strBeforeOperator.setLength(0);    //On click Clear
                 tvCalculate.setText("Calculate");
                 if (count == 1){
-                    strBeforeOperator.setLength(0);
+                    strBeforeOperator.setLength(0); // if enter has been pressed once, clear cleans both views
                     tvResult.setText("");
                     tvCalculate.setText("");
                 }
@@ -187,10 +187,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 tvCalculate.setText(strBeforeOperator);  // On Click Clear
                 break;
 
-            case R.id.btnAdd:
+            case R.id.btnAdd:  //on Click for add
                 operator = "add";
                 strBeforeOperator.append("+");
                 tvCalculate.setText(strBeforeOperator);
+                //if enter has been pressed, clear stringbuiler and save from result text view into the calculate  view and add operator
                 if (count == 1) {
                     strBeforeOperator.setLength(0);
                     strBeforeOperator.append(tvResult.getText() + "+");
@@ -203,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 operator = "min";
                 strBeforeOperator.append("-");
                 tvCalculate.setText(strBeforeOperator);
-                if (count == 1) {
+                if (count == 1) {  //if enter has been pressed, clear stringbuiler and save from result text view into the calculate  view and add operator
                     strBeforeOperator.setLength(0);
                     strBeforeOperator.append(tvResult.getText() + "-");
                     tvCalculate.setText(strBeforeOperator);
@@ -215,7 +216,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strBeforeOperator.append("*");
                 tvCalculate.setText(strBeforeOperator);
 
-                if (count == 1) {
+                if (count == 1) {//if enter has been pressed, clear stringbuiler and save from result text view into the calculate  view and add operator
                     strBeforeOperator.setLength(0);
                     strBeforeOperator.append(tvResult.getText() + "*");
                     tvCalculate.setText(strBeforeOperator);
@@ -227,18 +228,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 strBeforeOperator.append("/");
                 tvCalculate.setText(strBeforeOperator);
 
-                if (count == 1) {
+                if (count == 1) {//if enter has been pressed, clear stringbuiler and save from result text view into the calculate  view and add operator
                     strBeforeOperator.setLength(0);
                     strBeforeOperator.append(tvResult.getText() + "/");
                     tvCalculate.setText(strBeforeOperator);
                 }
                 break;
 
-            case R.id.btnEnter:
+            case R.id.btnEnter:  // on Click enter
 
                 count = 1;
-                if (operator.equals("add")) {        //
-                    equation = strBeforeOperator.toString().split("\\+", 2);
+                if (operator.equals("add")) {        // if Operator is add
+                    equation = strBeforeOperator.toString().split("\\+", 2); // split method by operator and add numbers into array
                     num1 = equation[0];
                     num2 = equation[1];
                     String result = addNumbers(num1, num2);
@@ -246,7 +247,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     num1 = result;
 
                 } else if (operator.equals("min")) {
-                    equation = strBeforeOperator.toString().split("-", 2);
+                    equation = strBeforeOperator.toString().split("-", 2); // split method by operator and add numbers into array
 
                     num1 = equation[0];
                     num2 = equation[1];
@@ -255,7 +256,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     num1 = result;
 
                 } else if (operator.equals("mul")) {
-                    equation = strBeforeOperator.toString().split("\\*", 2);
+                    equation = strBeforeOperator.toString().split("\\*", 2);// split method by operator and add numbers into array
 
                     num1 = equation[0];
                     num2 = equation[1];
@@ -264,7 +265,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     num1 = result;
 
                 } else if (operator.equals("div")) {
-                    equation = strBeforeOperator.toString().split("/", 2);
+                    equation = strBeforeOperator.toString().split("/", 2); // split method by operator and add numbers into array
 
                     num1 = equation[0];
                     num2 = equation[1];
