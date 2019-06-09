@@ -3,7 +3,12 @@
  -Changing the orientation to landscape(layout qualifier) will display now functionality (Scientific calculator)
  Hint: Create all buttons using Relative/Grid Layout and append the values to the TextView. Show the result in a separate TextView.
  
- ![Screen Shot 2019-06-07 at 1 36 25 PM](https://user-images.githubusercontent.com/51377425/59122777-9cde7580-8929-11e9-8f0a-573cab59b577.png)
+ ![calculator1](https://user-images.githubusercontent.com/51377425/59155539-ab2baf00-8a59-11e9-9b67-186d9a185948.png)
+![calculator2](https://user-images.githubusercontent.com/51377425/59155541-acf57280-8a59-11e9-85db-154763159f50.png)
+![calculator3](https://user-images.githubusercontent.com/51377425/59155543-aebf3600-8a59-11e9-8873-5f222e0cc70e.png)
+
+
+
 
  
  
