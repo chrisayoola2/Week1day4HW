@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/tvResult"
         android:text="Result"
-        android:textSize="50sp"
 
         />
     <TextView
@@ -25,20 +24,21 @@
         android:id="@+id/tvCalculate"
         android:text="Calculate"
         android:layout_below="@id/tvResult"
-        android:textSize="40sp"
-
         />
 
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="4"
         android:orientation="horizontal"
         android:rowCount="5"
         android:layout_alignParentBottom="true"
-        android:useDefaultMargins="true">
+        android:useDefaultMargins="true"
+        android:layout_centerHorizontal="true"
+
+        >
 
         <Button
             android:id="@+id/btn7"
